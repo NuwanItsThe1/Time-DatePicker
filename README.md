@@ -1,18 +1,19 @@
 # 🕑 Clock Date Time Picker for Bootstrap
 
-A beautiful, material-style, clock-face *time picker* built for *Bootstrap 5+*.  
-Supports *AM/PM, **theme customization, **dark mode*, and more — all without dependencies beyond Bootstrap.
+A beautiful, material-style **Clock Time Picker** and **Calendar Date Picker** built for **Bootstrap 5+**.  
+Supports **theme customization**, **dark mode**, and more — all in one lightweight, dependency-free module.
 
 ---
 
 ## 🚀 Features
 
-- 🕒 Intuitive clock-face time selection (hour + minute)
-- 🌙 Dark mode & custom themes via CSS variables
-- 🎨 Easy theme switching via theme attribute (e.g., theme="orange")
-- ⚙ No dependencies except Bootstrap 5
-- 📦 Lightweight & framework-agnostic (works with any HTML/CSS/JS setup)
-
+- 🕒 Intuitive **clock-face time selection** (hour + minute)
+- 📅 Interactive **calendar-style date selection**
+- 🌙 **Dark mode** & custom themes via CSS variables
+- 🎨 Easy **theme switching** with the `theme` attribute
+- 🧩 **Modular UI** with a consistent modal layout for both time and date
+- ⚙ **No dependencies** beyond Bootstrap 5
+- 📦 Lightweight & framework-agnostic (works in any HTML/CSS/JS project)
 ---
 
 ## 📦 Installation
@@ -42,13 +43,13 @@ html
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Clock Date Time Picker CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-date-clock-timepicker@1.1.0/dist/clock-date-timepicker.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-date-clock-timepicker@2.0.0/dist/clock-date-timepicker.css" rel="stylesheet">
 
 <!-- Bootstrap 5 JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Clock Date Time Picker JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-date-clock-timepicker@1.1.0/dist/clock-date-timepicker.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-date-clock-timepicker@2.0.0/dist/clock-date-timepicker.js"></script>
 
 
 ---
@@ -56,6 +57,7 @@ html
 ## 🛠 Usage
 
 ### 🧩 Basic HTML Example
+⏰ Time Picker Example
 
 ```html
 <div class="input-group">
@@ -72,6 +74,22 @@ ClockTimePicker('#timeInput');
 
 This opens the clock picker and updates the input field when a time is selected.
 
+📅 Date Picker Example
+
+```html
+<div class="input-group">
+  <input type="text" id="dateInput" class="form-control" readonly placeholder="Pick date" theme="green">
+  <button class="btn btn-outline-secondary" onclick="DatePicker('#dateInput')">📅</button>
+</div>
+```
+
+### 🧪 JavaScript
+
+js
+DatePicker('#dateInput');
+
+
+This opens the date picker and updates the input field when a date is selected.
 ---
 
 ## 🎨 Available Themes
@@ -88,7 +106,7 @@ Add a theme attribute to your <input> field to change the look:
 | Red        | `<input theme="red">`                 |
 | Yellow     | `<input theme="yellow">`              |
 
-> The time picker will apply the selected theme automatically.
+> The time and date pickers will apply the selected theme automatically.
 
 ---
 
@@ -144,7 +162,7 @@ clock-date-timepicker/
 
 > ✅ Live demo coming soon
 
-For now, clone the repo and open demo/index.html in your browser to test.
+For now, clone the repo and open demo/index.html in your browser to test both the time and date pickers.
 
 ---
 
@@ -187,5 +205,5 @@ Feel free to submit pull requests, report issues, or request features.
 
 ## 🏷 Tags
 
-bootstrap · timepicker · clock · material · date-time-picker · modal · dark-mode · css-variables
+bootstrap · timepicker · datepicker · calendar · clock · material · date-time-picker · modal · dark-mode · css-variables
 ```

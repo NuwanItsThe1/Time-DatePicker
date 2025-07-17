@@ -165,3 +165,109 @@ body.theme-yellow {
   box-shadow: 0 0 0 0.2rem rgba(0,0,0,0.2);
 }
 
+/* ===== Date Picker Modal Styling ===== */
+.date-picker-modal .modal-dialog {
+  max-width: 350px;
+}
+
+.date-picker-modal .modal-content {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* ===== Header Style ===== */
+.date-header {
+  background-color: var(--picker-primary, #0d6efd);
+  color: var(--picker-primary-text, #fff);
+  padding: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.date-header .time-part {
+  cursor: pointer;
+}
+
+.date-header .time-part.active {
+  text-decoration: underline solid;
+}
+
+/* ===== Grid Layouts ===== */
+.date-picker-modal .modal-body{
+  min-height: 352px;
+}
+.calendar-grid {
+  display: grid;
+  gap: 4px;
+  padding: 10px;
+  justify-items: center;
+}
+
+.calendar-grid.view-day {
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-grid.view-month{
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 40px;
+}
+
+.calendar-grid.view-year {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.calendar-day,
+.calendar-day-name {
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: var(--picker-face, #eee);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.calendar-day-name {
+  font-weight: bold;
+  background: transparent;
+  cursor: default;
+}
+
+.calendar-day:hover {
+  background-color: var(--picker-hover, #ddd);
+}
+
+.calendar-day.selected {
+  background-color: var(--picker-primary, #0d6efd);
+  color: var(--picker-primary-text, #fff);
+  font-weight: bold;
+}
+
+/* ===== Navigation Arrows ===== */
+#yearNav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin-top: 5px;
+}
+#dayNav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin-top: 5px;
+}
+
+/* ===== Footer Buttons ===== */
+.date-picker-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px 14px;
+}
+
+.date-picker-footer .btn {
+  min-width: 80px;
+}
